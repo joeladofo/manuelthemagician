@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Manuelthemagician | Magic & Mind Reading in Accra</title>
 <meta name="description" content="Close-up magic, mind reading and interactive entertainment for weddings, parties and corporate events in Accra.">
+<meta property="og:image" content="images/manuel.jpg">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{--red:#e0263a;--purple:#7b2cbf;--gold:#f0bf4c;--bg:#08070d;--bg2:#120f24;--text:#f7f1e3;--muted:#b9b2c4;--line:rgba(240,191,76,.22);--glass:rgba(255,255,255,.05);
@@ -65,6 +66,29 @@ h1 em{font-style:italic;background:linear-gradient(90deg,var(--red),var(--gold))
 .g::before{content:attr(data-e);position:absolute;top:14px;right:18px;font-size:3.4rem;opacity:.9;transition:.4s}
 .g:hover{transform:scale(1.03)}.g:hover::before{transform:rotate(15deg) scale(1.2)}
 .g:nth-child(1){background:linear-gradient(150deg,#7b2cbf,#2a0f4a)}.g:nth-child(2){background:linear-gradient(150deg,#1e3a8a,#0b1230)}.g:nth-child(3){background:linear-gradient(150deg,#e0263a,#5a0f1c)}.g:nth-child(4){background:linear-gradient(150deg,#b8860b,#3a2a05)}
+.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0;transition:transform .6s}
+.g::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(to top,rgba(8,7,13,.88),rgba(8,7,13,.1) 65%)}
+.g::before{z-index:2}.g span{position:relative;z-index:2}.g:hover img{transform:scale(1.08)}
+.portrait{width:150px;height:150px;margin:0 auto 22px;border-radius:50%;padding:4px;background:linear-gradient(135deg,var(--gold),var(--red),var(--purple));box-shadow:0 0 40px rgba(123,44,191,.5)}
+.portrait img{width:100%;height:100%;display:block;border-radius:50%;object-fit:cover;border:3px solid var(--bg)}
+.cimg{object-position:center 30%;display:block;width:calc(100% + 56px);height:150px;margin:-28px -28px 18px;object-fit:cover;border-radius:22px 22px 0 0}
+.strip{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px max(4%,calc((100% - 1100px)/2)) 18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;-webkit-overflow-scrolling:touch}
+.shot{flex:0 0 auto;height:min(380px,58vh);padding:0;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--bg2);cursor:zoom-in;scroll-snap-align:center}
+.shot img{width:auto;height:100%;display:block;transition:transform .5s}
+.shot:hover img{transform:scale(1.06)}
+.shot:focus-visible,.lb button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+.lb{position:fixed;inset:0;z-index:50;display:grid;place-items:center;background:rgba(5,4,10,.95);padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+.lb[hidden]{display:none}
+.lb img{max-width:92vw;max-height:82vh;border-radius:14px;box-shadow:0 30px 80px rgba(0,0,0,.7)}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:1px solid var(--line);background:rgba(255,255,255,.1);color:#fff;font-size:1.8rem;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lbx{top:calc(env(safe-area-inset-top,0px) + 14px);right:14px}.lbp{left:10px;top:50%}.lbn{right:10px;top:50%}
+.lbc{position:absolute;bottom:calc(env(safe-area-inset-bottom,0px) + 16px);color:var(--muted);font-size:.85rem}
+.social{display:flex;gap:12px;justify-content:center;margin:0 0 16px}
+.social a{width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:var(--glass);display:grid;place-items:center;color:var(--text);transition:.25s}
+.social a[hidden]{display:none}
+.social a:hover{color:var(--gold);border-color:var(--gold);transform:translateY(-3px)}
+.social svg{width:22px;height:22px}
+.follow{text-align:center;margin-top:30px;color:var(--muted)}.follow p{margin-bottom:14px}
 .quote{background:var(--glass);border:1px solid var(--line);border-radius:22px;padding:30px;font-style:italic;color:#e4ddcf}
 .quote b{display:block;margin-top:12px;color:var(--gold);font-style:normal}
 form{background:linear-gradient(145deg,rgba(224,38,58,.22),rgba(18,15,36,.9));border:1px solid var(--line);border-radius:28px;padding:34px;display:grid;gap:14px;max-width:640px;margin:auto}
@@ -88,12 +112,13 @@ footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;co
 
 <header><div class="wrap nav">
   <div class="brand">Manuel<b>themagician</b></div>
-  <nav class="links"><a href="#services">Services</a><a href="#trick">Try Magic</a><a href="#events">Events</a><a href="#faq">FAQ</a><a href="#book">Book</a></nav>
+  <nav class="links"><a href="#services">Services</a><a href="#trick">Try Magic</a><a href="#events">Events</a><a href="#gallery">Gallery</a><a href="#faq">FAQ</a><a href="#book">Book</a></nav>
   <a class="btn" href="#book">Book Now</a>
 </div></header>
 
 <main>
 <section class="hero"><div class="wrap">
+  <div class="portrait"><img src="images/manuel.jpg" alt="Portrait of Manuel the magician holding a playing card" width="300" height="300" onerror="this.closest('.portrait').remove()"></div>
   <span class="tag">Close-up magic • Mind reading • Accra</span>
   <h1>Make Your Event <em>Unforgettable</em></h1>
   <p>Jaw-dropping close-up magic and mind reading for weddings, birthdays, corporate events and private celebrations across Accra.</p>
@@ -110,10 +135,10 @@ footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;co
 <section class="sec" id="services"><div class="wrap">
   <div class="head rv"><h2>Magic for Every Occasion</h2><p>Designed to surprise, connect and leave guests talking long after.</p></div>
   <div class="grid">
-    <article class="card rv"><div class="ico">🎩</div><h3>Close-Up Magic</h3><p>Impossible things happening in your guests' own hands. Perfect for receptions and cocktail hours.</p></article>
-    <article class="card rv"><div class="ico">🃏</div><h3>Interactive Card Magic</h3><p>Guests choose, shuffle and reveal. No two reactions are ever the same.</p></article>
-    <article class="card rv"><div class="ico">🔮</div><h3>Mind Reading</h3><p>Thoughts, choices and predictions delivered with style, humour and mystery.</p></article>
-    <article class="card rv"><div class="ico">🎤</div><h3>Event Hosting</h3><p>High-energy entertainment that keeps the whole room engaged from start to finish.</p></article>
+    <article class="card rv"><img class="cimg" src="images/service-closeup.jpg" alt="Close-up magic performed in a guest's hands" loading="lazy" onerror="this.remove()"><div class="ico">🎩</div><h3>Close-Up Magic</h3><p>Impossible things happening in your guests' own hands. Perfect for receptions and cocktail hours.</p></article>
+    <article class="card rv"><img class="cimg" src="images/service-cards.jpg" alt="Guests choosing cards during an interactive card trick" loading="lazy" onerror="this.remove()"><div class="ico">🃏</div><h3>Interactive Card Magic</h3><p>Guests choose, shuffle and reveal. No two reactions are ever the same.</p></article>
+    <article class="card rv"><img class="cimg" src="images/service-mind.jpg" alt="Manuel performing a mind reading routine" loading="lazy" onerror="this.remove()"><div class="ico">🔮</div><h3>Mind Reading</h3><p>Thoughts, choices and predictions delivered with style, humour and mystery.</p></article>
+    <article class="card rv"><img class="cimg" src="images/service-hosting.jpg" alt="Manuel hosting and entertaining at an event" loading="lazy" onerror="this.remove()"><div class="ico">🎤</div><h3>Event Hosting</h3><p>High-energy entertainment that keeps the whole room engaged from start to finish.</p></article>
   </div>
 </div></section>
 
@@ -133,11 +158,16 @@ footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;co
 <section class="sec" id="events"><div class="wrap">
   <div class="head rv"><h2>Perfect for Every Event</h2><p>Tailored experiences for every age and occasion.</p></div>
   <div class="gal rv">
-    <div class="g" data-e="💍">Weddings & Receptions</div>
-    <div class="g" data-e="💼">Corporate Events</div>
-    <div class="g" data-e="🎂">Birthday Parties</div>
-    <div class="g" data-e="🥂">Private Celebrations</div>
+    <div class="g" data-e="💍"><img src="images/wedding.jpg" alt="Close-up magic for wedding guests at a reception" loading="lazy" onerror="this.remove()"><span>Weddings & Receptions</span></div>
+    <div class="g" data-e="💼"><img src="images/corporate.jpg" alt="Magician entertaining guests at a corporate event" loading="lazy" onerror="this.remove()"><span>Corporate Events</span></div>
+    <div class="g" data-e="🎂"><img src="images/birthday.jpg" alt="Magic show at a birthday party" loading="lazy" onerror="this.remove()"><span>Birthday Parties</span></div>
+    <div class="g" data-e="🥂"><img src="images/private.jpg" alt="Magician performing at a private celebration" loading="lazy" onerror="this.remove()"><span>Private Celebrations</span></div>
   </div>
+</div></section>
+
+<section class="sec" id="gallery" hidden><div class="rv">
+  <div class="head wrap"><h2>See the Magic</h2><p>Real moments, real reactions. Tap any photo to enlarge it.</p></div>
+  <div class="strip" id="strip"><button class="shot" type="button" aria-label="Open photo 1"><img src="images/magic1.jpg" alt="Manuel smiling as he reveals oversized playing cards on stage" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 2"><img src="images/magic2.jpg" alt="Manuel in white face paint and a hat striking a mysterious pose" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 3"><img src="images/magic3.jpg" alt="Manuel holding up a playing card while guests watch and film" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 4"><img src="images/magic4.jpg" alt="Black and white photo of Manuel on stage pointing at the audience with a giant card" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 5"><img src="images/magic5.jpg" alt="Manuel pointing at the crowd while holding giant red playing cards" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 6"><img src="images/magic6.jpg" alt="Manuel in face paint swinging a hand-painted guitar" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 7"><img src="images/magic7.jpg" alt="Guests smiling and laughing as one holds up a playing card" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 8"><img src="images/magic8.jpg" alt="Black and white portrait of Manuel holding up a playing card" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 9"><img src="images/magic9.jpg" alt="Manuel on stage with a microphone fanning out three oversized cards" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 10"><img src="images/magic10.jpg" alt="Manuel performing close-up card magic at a table for a lounge crowd" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 11"><img src="images/magic11.jpg" alt="Manuel performing with oversized cards in front of a gold curtain" decoding="async"></button><button class="shot" type="button" aria-label="Open photo 12"><img src="images/magic12.jpg" alt="Manuel presenting giant cards to a seated audience" decoding="async"></button></div>
 </div></section>
 
 <section class="sec"><div class="wrap"><div class="quote rv">“Our guests could not stop talking about the magic. Manuel made the entire evening feel special, interactive and truly unforgettable.”<b>— A delighted event host, Accra</b></div></div></section>
@@ -161,10 +191,19 @@ footer{border-top:1px solid var(--line);padding:30px 0 90px;text-align:center;co
     <input id="guests" type="number" min="1" placeholder="Approx. number of guests">
     <button class="btn" type="submit">Send on WhatsApp 💬</button>
   </form>
+  <div class="follow rv"><p>Follow the magic</p><div class="social"><a data-s="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a data-s="tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.3 1.9 3.9 4 4.1v3.1c-1.4 0-2.7-.4-4-1.2v6.2c0 3.2-2.6 5.8-5.8 5.8S5 18.4 5 15.2s2.6-5.8 5.8-5.8c.3 0 .6 0 .9.1v3.2c-.3-.1-.6-.2-.9-.2-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7V3h3z"/></svg></a></div></div>
 </div></section>
 </main>
 
-<footer><div class="wrap">© <span id="yr"></span> Manuelthemagician • Accra, Ghana • +233 55 758 1225</div></footer>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+  <button class="lbx" type="button" aria-label="Close">&times;</button>
+  <button class="lbp" type="button" aria-label="Previous photo">&#8249;</button>
+  <img id="lbi" alt="">
+  <button class="lbn" type="button" aria-label="Next photo">&#8250;</button>
+  <div class="lbc" id="lbc"></div>
+</div>
+
+<footer><div class="wrap"><div class="social"><a data-s="instagram" href="#" target="_blank" rel="noopener" aria-label="Instagram" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a data-s="tiktok" href="#" target="_blank" rel="noopener" aria-label="TikTok" hidden><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.3 1.9 3.9 4 4.1v3.1c-1.4 0-2.7-.4-4-1.2v6.2c0 3.2-2.6 5.8-5.8 5.8S5 18.4 5 15.2s2.6-5.8 5.8-5.8c.3 0 .6 0 .9.1v3.2c-.3-.1-.6-.2-.9-.2-1.5 0-2.7 1.2-2.7 2.7s1.2 2.7 2.7 2.7 2.7-1.2 2.7-2.7V3h3z"/></svg></a></div>© <span id="yr"></span> Manuelthemagician • Accra, Ghana • +233 55 758 1225</div></footer>
 <a class="fab" aria-label="Chat on WhatsApp" href="https://wa.me/233557581225?text=Hello%20Manuelthemagician%2C%20I%20would%20like%20to%20book%20you%20for%20an%20event.">💬</a>
 
 <script>
@@ -194,6 +233,27 @@ document.getElementById('bf').addEventListener('submit',e=>{
   const text=`Hello Manuelthemagician, my name is ${v('name')}. I'd like to book you for a ${v('type')}`+(v('date')?` on ${v('date')}`:'')+(v('guests')?` with about ${v('guests')} guests`:'')+'. Are you available?';
   window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(text),'_blank');
 });
+// Social links: add the Instagram handle below to show its icon
+const SOCIAL={tiktok:'manuelthemagiciann',instagram:'manuelthemagician'};
+document.querySelectorAll('[data-s]').forEach(a=>{const k=a.dataset.s,h=SOCIAL[k];
+  if(h){a.href='https://www.'+k+'.com/'+(k==='tiktok'?'@':'')+h;a.hidden=false}});
+// Photo strip + viewer
+const gal=document.getElementById('gallery'),lb=document.getElementById('lb'),lbi=document.getElementById('lbi'),lbc=document.getElementById('lbc');
+const shots=[...document.querySelectorAll('.shot')];let cur=0,opener=null;
+shots.forEach(b=>{const im=b.querySelector('img');
+  const ok=()=>{gal.hidden=false},bad=()=>b.remove();
+  im.addEventListener('load',ok);im.addEventListener('error',bad);
+  if(im.complete){im.naturalWidth?ok():bad()}
+  b.addEventListener('click',()=>open(b))});
+const live=()=>shots.filter(b=>b.isConnected);
+function show(i){const L=live();cur=(i+L.length)%L.length;const im=L[cur].querySelector('img');lbi.src=im.src;lbi.alt=im.alt;lbc.textContent=(cur+1)+' / '+L.length}
+function open(b){opener=b;show(live().indexOf(b));lb.hidden=false;document.body.style.overflow='hidden';lb.querySelector('.lbx').focus()}
+function close(){lb.hidden=true;document.body.style.overflow='';if(opener&&opener.isConnected)opener.focus()}
+lb.querySelector('.lbx').onclick=close;lb.querySelector('.lbp').onclick=()=>show(cur-1);lb.querySelector('.lbn').onclick=()=>show(cur+1);
+lb.addEventListener('click',e=>{if(e.target===lb)close()});
+addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+let tx=null;lb.addEventListener('touchstart',e=>{tx=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{if(tx===null)return;const d=e.changedTouches[0].clientX-tx;if(Math.abs(d)>50)show(cur+(d<0?1:-1));tx=null});
 // Reveal + counters
 const io=new IntersectionObserver(es=>es.forEach(en=>{if(!en.isIntersecting)return;en.target.classList.add('in');
   en.target.querySelectorAll('[data-n]').forEach(el=>{const n=+el.dataset.n;let k=0;const st=n/50;const iv=setInterval(()=>{k+=st;if(k>=n){k=n;clearInterval(iv)}el.textContent=Math.round(k).toLocaleString()+(n>=200&&n<1000?'+':n>=1000?'+':'')},25)});
